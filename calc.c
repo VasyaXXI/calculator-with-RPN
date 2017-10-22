@@ -11,22 +11,26 @@ int main()
         switch (c)
         {
             case  ' ':
-            case '\n':
                 break;
-            case '=':
-                printf("RESULT\n%d\n", stack[n - 1]);  n--;
+            case '\n':
+                printf("RESULT\n%d\n", stack[n - 1]);
+                n--;
                 break;
             case '+':
-                stack[n-2] = stack[n-2] + stack[n-1];  n--;
+                stack[n-2] = stack[n-2] + stack[n-1];
+                n--;
                 break;
             case '-':
-                stack[n-2] = stack[n-2] - stack[n-1];  n--;
+                stack[n-2] = stack[n-2] - stack[n-1];
+                n--;
                 break;
             case '*':
-                stack[n-2] = stack[n-1] * stack[n-2];  n--;
+                stack[n-2] = stack[n-1] * stack[n-2];
+                n--;
                 break;
             case '/':
-                stack[n-2] = stack[n-2] / stack[n-1];   n--;
+                stack[n-2] = stack[n-2] / stack[n-1];
+                n--;
                 break;
             default:
                 ungetc (c, stdin);  /*return symbol back*/
