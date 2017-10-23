@@ -37,7 +37,7 @@ int main()
                 if(scanf("%d", &x) != 1)
                 {
                     printf("CAN'T READ INTEGER\n");
-                    return 0;
+                    return 1;
                 }
                 else
                 {
