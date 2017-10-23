@@ -13,7 +13,7 @@ int main()
             case  ' ':
                 break;
             case '\n':
-                printf("RESULT\n%d\n", stack[n - 1]);
+                printf("RESULT\n%d\n\n", stack[n - 1]);
                 n--;
                 break;
             case '+':
