@@ -2,7 +2,7 @@
 int main()
 {
     printf("INPUT THROUGH SPACE NUMBERS AND SIGNS\n");
-    int stack[1000];
+    int s[1000];
     int n = 0;  /*array index for a new number*/
     while (!feof(stdin))
     {
@@ -13,23 +13,23 @@ int main()
             case  ' ':
                 break;
             case '\n':
-                printf("RESULT\n%d\n\n", stack[n - 1]);
+                printf("RESULT\n%d\n\n", s[n - 1]);
                 n--;
                 break;
             case '+':
-                stack[n-2] = stack[n-2] + stack[n-1];
+                s[n-2] = s[n-2] + s[n-1];
                 n--;
                 break;
             case '-':
-                stack[n-2] = stack[n-2] - stack[n-1];
+                s[n-2] = s[n-2] - s[n-1];
                 n--;
                 break;
             case '*':
-                stack[n-2] = stack[n-1] * stack[n-2];
+                s[n-2] = s[n-1] * s[n-2];
                 n--;
                 break;
             case '/':
-                stack[n-2] = stack[n-2] / stack[n-1];
+                s[n-2] = s[n-2] / s[n-1];
                 n--;
                 break;
             default:
@@ -41,7 +41,7 @@ int main()
                 }
                 else
                 {
-                    stack[n] = x;
+                    s[n] = x;
                     n++;
                 }
         }
