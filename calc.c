@@ -1,7 +1,7 @@
 #include "stdio.h"
 int main()
 {
-    printf("INPUT THROUGH SPACE NUMBERS AND SIGNS\n");
+    printf("input through space numbers and signs\n");
     int s[1000];
     int n = 0;  /*array index for a new number*/
     while (!feof(stdin))
@@ -13,7 +13,7 @@ int main()
             case  ' ':
                 break;
             case '\n':
-                printf("RESULT\n%d\n\n", s[n - 1]);
+                printf("result\n%d\n\n", s[n - 1]);
                 n--;
                 break;
             case '+':
@@ -36,8 +36,9 @@ int main()
                 ungetc (c, stdin);  /*return symbol back*/
                 if(scanf("%d", &x) != 1)
                 {
-                    printf("CAN'T READ INTEGER\n");
-                    return 1;
+                    printf("can't read integer try again\n");
+                    fflush(stdin);
+
                 }
                 else
                 {
